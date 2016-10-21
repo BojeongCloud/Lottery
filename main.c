@@ -10,9 +10,9 @@
 #define TRUE 1
 #define FALSE 0
 
-#define GOLD_NUM 1
-#define SILVER_NUM 3
-#define BRONZE_NUM 10
+#define GOLD_COUNT 1
+#define SILVER_COUNT 3
+#define BRONZE_COUNT 10
 
 #define GOLD 3
 #define SILVER 2
@@ -73,7 +73,7 @@ void init_lot_pouch(struct lot **pouch) {
 		}
 		
 		int silver_count = 0;
-		while(silver_count < SILVER_NUM) {
+		while(silver_count < SILVER_COUNT) {
 			silver = rand() % 500;
 			if((*pouch)[silver].prize < SILVER) {
 				(*pouch)[silver].prize = SILVER;
@@ -83,7 +83,7 @@ void init_lot_pouch(struct lot **pouch) {
 		
 		int bronze;
 		int bronze_count = 0;
-		while(bronze_count < BRONZE_NUM) {
+		while(bronze_count < BRONZE_COUNT) {
 			bronze = rand() % 500;
 			if((*pouch)[bronze].prize < BRONZE) {
 				(*pouch)[bronze].prize = BRONZE;
